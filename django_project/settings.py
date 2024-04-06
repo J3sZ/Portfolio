@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     #local
     'portafolio.apps.PortafolioConfig',
     #3rd party
-    'crispy_forms',
+    
 
 ]
 
@@ -132,6 +132,4 @@ MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Django cispy
-CRYSPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
-CRISPY_TEMPLATE_PACK = "bootstrap5"
+

@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
-from .models import *
+from .models import Project
 
 # Create your views here
 
-
-def ProjectListView(request):
+def HomeView(request):
     projects = Project.objects.all()
-    return render(request, 'project.html',{'projects' : projects })
+    return render(request, 'home.html', {'projects':projects})
+ 
 
