@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #local
     'portafolio.apps.PortafolioConfig',
+    'blog.apps.BlogConfig',
     #3rd party
     
 

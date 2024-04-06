@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>AAAAAAAAA</h1>
+<h1>My projects</h1>
     {% for Project in projects %}
         <a href="">{{ Project.title }}</a>
         <p>{{ Project.description }}</p>
-        <img src="{{ Project.image.url }}" alt="{{ Project.title }}">
+        <img src="{{ Project.image.url }}" alt="">
         <br>
     {% endfor %}
     
