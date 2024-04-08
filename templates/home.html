@@ -3,10 +3,14 @@
 {% block content %}
 <h1>My projects</h1>
     {% for Project in projects %}
-        <a href="">{{ Project.title }}</a>
+        <h2>{{ Project.title }}</h2>
         <p>{{ Project.description }}</p>
         <img src="{{ Project.image.url }}" alt="">
-        <br>
+
+        {% if project.url %}
+            <a href="{{project.url}}">{{project.url}}</a>
+
+        {% endif %}
     {% endfor %}
     
 

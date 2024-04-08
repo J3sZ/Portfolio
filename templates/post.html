@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
 <h1>My posts</h1>
-<br>
+
 
 {% block content %}
 
     {% for post in posts %}
         <h2>{{ post.title }}</h2>
-        
         <p>{{ post.description|striptags|truncatechars:100 }}</p>
         <img src="{{ post.image.url }}" alt="{{ Post.title }}">
+
         <a href="{% url 'blog:post_detail' post.id %}"></a>
-        <br>
+        
     {% endfor %}
         
 
