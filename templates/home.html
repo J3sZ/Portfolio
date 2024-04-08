@@ -1,17 +1,52 @@
 {% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
 
 {% block content %}
-<h1>My projects</h1>
+
+<header class="row">
+    <div class="col-md-5">
+        <img  class="imagen" src="{% static 'portfolio/profile.png' %}" alt="">
+    </div>
+
+    <div class="col-md-7">
+        <h1>I am <strong>Oscar telleria</strong></h1>
+        <h2>I am a Python Backend Developer</h2>
+        <p>python web developer with Django Framework, backend oriented</p>
+
+
+        <a href="{% static 'portfolio/CV.pdf' %}" 
+        class="btn btn-primary btn-lg rounded-0 my-3">Download CV</a>
+    </div>
+</header>
+
+
+
+<div class="row my-4 text-center">
+    <h3>My projects</h3>
+    
+
     {% for Project in projects %}
-        <h2>{{ Project.title }}</h2>
-        <p>{{ Project.description }}</p>
-        <img src="{{ Project.image.url }}" alt="">
+    <div class="col-md-4">
+        <div class="card bg-black">
+            <div class="card-body">
 
-        {% if project.url %}
-            <a href="{{project.url}}">{{project.url}}</a>
+                <h2>{{ Project.title }}</h2>
+                <p>{{ Project.description }}</p>
+                <img src="{{ Project.image.url }}" alt="" class=" img-fluid">
 
-        {% endif %}
+                {% if project.url %}
+                    <a href="{{project.url}}">{{project.url}}</a>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+        
     {% endfor %}
     
+</div>
 
 {% endblock content %}
