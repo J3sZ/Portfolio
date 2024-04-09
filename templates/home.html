@@ -11,8 +11,8 @@
     </div>
 
     <div class="col-md-7">
-        <h1>I am <strong>Oscar telleria</strong></h1>
-        <h2>I am a Python Backend Developer</h2>
+        <h1><strong>Oscar telleria</strong></h1>
+        <h2>Python Backend Developer</h2>
         <p>python web developer with Django Framework, backend oriented</p>
 
 
@@ -29,12 +29,12 @@
 
     {% for Project in projects %}
     <div class="col-md-4">
-        <div class="card bg-black">
+        <div class="card bg-dark">
             <div class="card-body">
 
                 <h2>{{ Project.title }}</h2>
                 <p>{{ Project.description }}</p>
-                <img src="{{ Project.image.url }}" alt="" class=" img-fluid">
+                <img src="{{ Project.image.url }}" alt="{{project.title}}" class=" img-fluid">
 
                 {% if project.url %}
                     <a href="{{project.url}}">{{project.url}}</a>
